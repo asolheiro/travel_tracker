@@ -47,3 +47,10 @@ class TripsRepository:
         )
         self.__connection.commit()
         return self.find_trip_by_id(trip_id)
+
+    def delete_trips(self) -> None:
+        cursor = self.__connection.cursor()
+        cursor.execute(
+            '''DELETE FROM trips'''
+        )
+        self.__connection.commit()
