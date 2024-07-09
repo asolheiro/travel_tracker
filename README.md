@@ -60,16 +60,18 @@ O Travel Tracker é uma aplicação web desenvolvida para gerenciar viagens, per
 - **.vscode:** Instruções para o vscode deletar automaticamente arquivos e pastas "pycache'
 - **init:** Script SQL para criar as tabelas e colunas no banco de dados
 - **src/:** Pasta principal do projeto
-    - **core/:** Diretório contendo funcionalidades que não devem variar de versão para versão
-        - **models/:** Modelos do projeto
-            - **settings/:** Gerenciador de conexões com o banco de dados
-            - **repositories/:** Operador de instruções no banco de dados 
-    - **main/:** Diretório principal do servidor
-        - **routes/:** Diretório que mapeia as rotas da aplicação
-        - **server/:** Diretório com as Blueprints da aplicação
-    - **tests/:** Diretório completo de tests, não ignorado por opção
-    - **templates/:** Diretório contendo os arquivos HTML.
-    - **static/css/:** Diretório contendo os arquivos CSS.
+   - **core/:** Diretório contendo funcionalidades que não devem variar de versão para versão
+      - **models/:** Modelos do projeto
+         - **settings/:** Gerenciador de conexões com o banco de dados
+         - **repositories/:** Operador de instruções no banco de dados 
+   - **v1/:** Diretório das funcionalidades da versão 1
+      - **controllers/:** Lógica dos processos das funcionalidades
+      - **main/:** Diretório principal do servidor
+         - **routes/:** Diretório que mapeia as rotas da aplicação
+         - **server/:** Diretório com as Blueprints da aplicação
+   - **tests/:** Diretório completo de tests, não ignorado por opção
+   - **templates/:** Diretório contendo os arquivos HTML.
+   - **static/css/:** Diretório contendo os arquivos CSS.
 - **database.db:** Arquivo SQLite para armazenamento dos dados.
 - **Makefile:** Gerenciador de tasks do projeto
 - **poetry.lock** Gerenciador de dependências do Poetry

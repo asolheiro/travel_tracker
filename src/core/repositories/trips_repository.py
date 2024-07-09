@@ -28,10 +28,10 @@ class TripsRepository:
         )
         self.__connection.commit()
         
-    def find_trip_by_id(self, trip_ind: str) -> tuple:
+    def find_trip_by_id(self, trip_id: str) -> tuple:
         cursor = self.__connection.cursor()
         cursor.execute(
-            ''' SELECT * FROM trips WHERE id = ? ''', (trip_ind,)
+            '''SELECT * FROM trips WHERE id = ?''', (trip_id,)
         )
         return cursor.fetchone()
     
