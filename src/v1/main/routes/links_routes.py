@@ -4,8 +4,8 @@ from flask import jsonify, Blueprint, request
 from src.core.models.settings.db_connection_handler import db_connection_handler
 
 # Importação de controllers
-from src.v1.controllers.link_creator import LinkCreator
-from src.v1.controllers.link_finder import LinkFinder
+from src.v1.controllers.link_controllers.link_creator import LinkCreator
+from src.v1.controllers.link_controllers.link_finder import LinkFinder
 
 # Importação de repositórios
 from src.core.repositories.links_repository import LinksRepository

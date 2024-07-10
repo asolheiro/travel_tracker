@@ -4,15 +4,14 @@ from flask import jsonify, Blueprint, request
 from src.core.models.settings.db_connection_handler import db_connection_handler
 
 # Importação de controllers
-from src.v1.controllers.trip_creator import TripCreator
-from src.v1.controllers.trip_finder import TripFinder
-from src.v1.controllers.trip_confirmer import TripConfirmer
-from src.v1.controllers.link_creator import LinkCreator
+from src.v1.controllers.trip_controllers.trip_creator import TripCreator
+from src.v1.controllers.trip_controllers.trip_finder import TripFinder
+from src.v1.controllers.trip_controllers.trip_confirmer import TripConfirmer
+
 
 # Importação de repositórios
 from src.core.repositories.trips_repository import TripsRepository
 from src.core.repositories.emails_invite_repository import EmailsToInviteRepository
-from src.core.repositories.links_repository import LinksRepository
 
 
 trips_routes_bp = Blueprint(

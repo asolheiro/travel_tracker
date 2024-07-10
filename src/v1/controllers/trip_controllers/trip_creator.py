@@ -3,6 +3,7 @@ from typing import Dict
 
 from src.core.repositories.trips_repository import TripsRepository
 from src.core.repositories.emails_invite_repository import EmailsToInviteRepository
+from src.drivers.email_sender import send_email
 
 
 class TripCreator:
@@ -26,6 +27,9 @@ class TripCreator:
                         "email": email,
                         "trip_id": trip_infos['id'],
                     })
+            send_email(
+                [body["owner_email"]],
+                f"http://localhost:3000/trips/{trip_infos["id"]}/confirm")
                 
             return {
                 "body": {

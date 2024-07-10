@@ -1,0 +1,22 @@
+{
+    "status": "success",
+    "user": "u7ix3y7haicv32t6@ethereal.email",
+    "pass": "f3PDSHtv3tGm63KS2K",
+    "smtp": {
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "secure": "FALSE"
+    },
+    "imap": {
+        "host": "imap.ethereal.email",
+        "port": 993,
+        "secure": "TRUE"
+    },
+    "pop3": {
+        "host": "pop3.ethereal.email",
+        "port": 995,
+        "secure": "TRUE"
+    },
+    "web": "https://ethereal.email",
+    "mxEnabled": "FALSE"
+}

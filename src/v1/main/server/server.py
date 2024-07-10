@@ -2,6 +2,9 @@ from flask import Flask, jsonify, Blueprint
 
 from src.v1.main.routes.trips_routes import trips_routes_bp
 from src.v1.main.routes.links_routes import links_routes_bp
+from src.v1.main.routes.activities_routes import activities_routes_bp
+from src.v1.main.routes.participants_routes import participants_routes_bp
+
 
 
 app = Flask(__name__)
@@ -15,3 +18,5 @@ def get_root():
 app.register_blueprint(root_bp)
 app.register_blueprint(trips_routes_bp)
 app.register_blueprint(links_routes_bp)
+app.register_blueprint(activities_routes_bp)
+app.register_blueprint(participants_routes_bp)

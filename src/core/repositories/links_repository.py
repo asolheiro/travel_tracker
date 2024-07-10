@@ -12,7 +12,9 @@ class LinksRepository:
         cursor = self.__connection.cursor()
         cursor.execute(
             '''
-            INSERT INTO links
+            INSERT 
+            INTO 
+                links
                 (id, trip_id, link, title)
             VALUES
                 (?, ?, ?, ?)
@@ -24,17 +26,31 @@ class LinksRepository:
             )
         )
         self.__connection.commit()
-        
+
+
     def get_link_by_trip_id(self, trip_id: str) -> tuple:
         cursor = self.__connection.cursor()
         cursor.execute(
-            ''' SELECT * FROM links WHERE trip_id = ? ''', (trip_id,)
+            '''
+            SELECT 
+                *
+            FROM
+                links
+            WHERE
+                trip_id = ?
+            ''', 
+            (trip_id,)
         )
         return cursor.fetchall()
     
+
     def delete_links(self) -> None:
         cursor = self.__connection.cursor()
         cursor.execute(
-            '''DELETE FROM links'''
+            '''
+            DELETE 
+            FROM 
+                links
+            '''
         )
         self.__connection.commit()
